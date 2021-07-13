@@ -1,0 +1,184 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* */
+body {
+    font-family: "Arial";
+    font-size: 18px;
+    background-color: #F5F7F8;
+}
+
+header {
+    padding: 20px 10px;
+    background-color: #DA291C;
+    color: #FFF;
+}
+
+main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    width: 85%;
+    margin: 20px auto;
+    padding: 20px 10px;
+    background-color: #FFF;
+}
+
+footer {
+    padding: 20px;
+    background-color: #2D2926;
+    color: #FFF;
+}
+
+small {
+    font-style: italic;
+    font-size: .9em;
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 1.25em;
+}
+
+h3 {
+	width: 100%;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+h5 {
+    font-weight: bold;
+}
+
+select {
+	outline: none;
+	width: 100%;
+	background-color: #FFF;
+	padding: 5px;
+	border: 2px solid #CCC;
+	color: #2D2926;
+	margin-bottom: 15px;
+	font-size: .85em;
+}
+
+nav ul {
+    display: flex;
+}
+
+a {
+    color: #DDD;
+    color: rgba(255, 255, 255, .85);
+    text-decoration: none;
+    transition: all .2s ease-in-out;
+}
+
+a:hover {
+    transition: all .2s ease-in-out;
+    color: #FFF;
+    text-decoration: underline;
+}
+
+nav ul li a {
+    font-weight: bold;
+    padding: 10px;
+}
+
+.Wrap {
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.WrapFooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 93.4vh;
+}
+
+.Content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.RadioGroup {
+	margin-bottom: 15px;
+}
+
+.RadioButton {
+	display: flex;
+}
+
+.Button {
+	outline: none;
+	width: 100%;
+	background-color: #FFF;
+	padding: 5px;
+	border: 2px solid #CCC;
+	color: #2D2926;
+	font-weight: bold;
+	transition: all .15s ease-in-out;
+	font-size: .85em;
+}
+
+.Button:hover {
+	transition: all .15s ease-in-out;
+	background-color: #DA291C;
+	color: #FFF;
+	color: rgba(255, 255, 255, .85);
+	border-color: #DA291C;
+}
+
+input[type="radio"] {
+	display: block;
+}

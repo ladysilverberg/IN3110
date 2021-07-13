@@ -1,0 +1,17 @@
+"(?:\b|\s|^)True(?!\w)": true
+"(?:\b|\s|^)False(?!\w)": false
+"(?:\b|\s|^)import(?!\w)": import
+"(?:\b|\s|^)from(?!\w)": from
+"(?:\b|\s|^)for(?!\w)": for
+"(?:\b|\s|^)def(?!\w)": def
+"(?:\b|\s|^)if(?!\w)": if
+"(?:\b|\s|^)else(?!\w)": else
+"(?:\b|\s|^)elif(?!\w)": elif
+"(?:\b|\s|^)while(?!\w)": while
+"(?:\b|\s|^)pass(?!\w)": pass
+"(?:\b|\s|^)None(?!\w)": none
+"(?:\b|\s|^)class(?!\w)": class
+"(?:\b|\s|^)try(?!\w)": try
+"(?:\b|\s|^)except(?!\w)": except
+""(?:[^"\\]|\\.)*"|'(?:[^'\\]|\\.)*'": strings
+"#.*(?:$|\n)": comment

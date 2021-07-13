@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+    <title>Diabetes Visualizer</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/favicon.png') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <header>
+        <div class="Wrap">
+            <h1>Diabetes Visualizer</h1>
+
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('visualize_data') }}">Visualizer</a></li>
+                    <li><a href="{{ url_for('help') }}">Help</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="WrapFooter">
+    <main>
+        <div class="Content">
+            <form action="/" method="post">
+                <h3>Method</h3>
+                <div class="RadioGroup">
+                    {% for method in methods %}
+                    <div class="RadioButton">
+                        {% if method|string() == cur_method|string() %}
+                            <input type="radio" checked name="method" value="{{ method}}">
+                            {{ method }}
+                        {% else %}
+                            <input type="radio" name="method" value="{{ method}}">
+                            {{ method }}
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                </div>
+
+                <h3>Feature 1</h3>
+                <select name="featurex">
+                {% for feature in features %}
+                    {% if feature|string() == cur_feature_x|string() %}
+                        <option selected value="{{ feature }}">{{ feature }}</option>
+                    {% else %}
+                        <option value="{{ feature }}">{{ feature }}</option>
+                    {% endif %}
+                {% endfor %}
+                </select>
+
+                <h3>Feature 2</h3>
+                <select name="featurey">
+                {% for feature in features %}
+                    {% if feature|string() == cur_feature_y|string() %}
+                        <option selected value="{{ feature }}">{{ feature }}</option>
+                    {% else %}
+                        <option value="{{ feature }}">{{ feature }}</option>
+                    {% endif %}
+                {% endfor %}
+                </select>
+
+                <button type="submit" class="Button">Visualize</button>
+            </form>
+        </div>
+
+        <div class="Content">
+            <img src="{{ url_for('static', filename='img/visualize.png') }}" alt="Visualization of diabetes data">
+            <h5>Training Set Accuracy: {{ t_score }}</h5>
+            <h5>Validation Set Accuracy: {{ v_score }}</h5>
+        </div>
+    </main>
+
+    <footer>
+        <div class="Wrap">
+            <small>Implemented by kathrhoe</small>
+        </div>
+    </footer>
+    </div>
+</body>
+</html>

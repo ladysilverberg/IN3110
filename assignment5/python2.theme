@@ -1,0 +1,16 @@
+true: 0;33
+false: 0;33
+import: 0;36
+def: 0;36
+for: 0;36
+if: 0;36
+else: 0;36
+elif: 0;36
+while: 0;36
+pass: 0;36
+none: 0;33
+class: 0;36
+try: 0;36
+except: 0;36
+comment: 0;31
+strings: 0;32
